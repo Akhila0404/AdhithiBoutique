@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #fdfaf5;
+  --color-foreground: #1a3c34;
+  --color-brand-gold: #c5a059;
+  --color-brand-dark: #1a3c34;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom scrollbar for a cleaner mobile look */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Hide Next.js Dev/Static Indicators */
+nextjs-portal,
+[data-nextjs-toast-wrapper],
+#nextjs-static-indicator {
+  display: none !important;
+}
